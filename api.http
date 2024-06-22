@@ -1,0 +1,58 @@
+GET http://localhost:3000/users
+
+### Usuario comum
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "test@test.com",
+    "password": "123456"
+}
+
+### Usuario parceiro
+POST http://localhost:3000/partners/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "test@test.com",
+    "password": "123456"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/partners
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicm9sZXMiOlsiUEFSVE5FUiJdLCJjcmVhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJpYXQiOjE3MTkwODQ5ODgsImV4cCI6MTcxOTA5NDk4OH0.y1r_oxrMMZfFOF8H6UfHFt1USu1wnFF2cEDaBI99P9Q
+
+{
+    "name": "Partner 1"
+}
+
+###
+GET http://localhost:3000/partners
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicm9sZXMiOlsiUEFSVE5FUiJdLCJjcmVhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJpYXQiOjE3MTkwODQ5ODgsImV4cCI6MTcxOTA5NDk4OH0.y1r_oxrMMZfFOF8H6UfHFt1USu1wnFF2cEDaBI99P9Q
+
+###
+POST http://localhost:3000/events
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicm9sZXMiOlsiUEFSVE5FUiJdLCJjcmVhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJpYXQiOjE3MTkwODQ5ODgsImV4cCI6MTcxOTA5NDk4OH0.y1r_oxrMMZfFOF8H6UfHFt1USu1wnFF2cEDaBI99P9Q
+
+{
+    "name": "Evento 1",
+    "description": "Evento 1",
+    "date": "2024-06-22T14:50:32.843Z"
+}
+
+###
+GET http://localhost:3000/events
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwicm9sZXMiOlsiUEFSVE5FUiJdLCJjcmVhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJ1cGRhdGVkQXQiOiIyMDI0LTA2LTIyVDE5OjM2OjEzLjkwM1oiLCJpYXQiOjE3MTkwODQ5ODgsImV4cCI6MTcxOTA5NDk4OH0.y1r_oxrMMZfFOF8H6UfHFt1USu1wnFF2cEDaBI99P9Q
